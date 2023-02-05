@@ -26,6 +26,7 @@ export default function NewSize(p: { onClose: () => void }) {
   return (
     <AddForm title="Añadir tamaño" onSubmit={handleSubmit}>
       <TextField
+        autoFocus
         fullWidth
         label="Nombre del tamaño"
         variant="filled"

@@ -26,6 +26,7 @@ export default function NewBrand(p: { onClose: () => void }) {
   return (
     <AddForm title="Añadir marca" onSubmit={handleSubmit}>
       <TextField
+        autoFocus
         fullWidth
         label="Nombre de la marca"
         variant="filled"

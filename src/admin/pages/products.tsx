@@ -101,7 +101,9 @@ export default function Products() {
           {addForm === "brand" ? (
             <NewBrand onClose={() => openForm(null)} />
           ) : null}
-          {addForm === "category" ? <NewCategory /> : null}
+          {addForm === "category" ? (
+            <NewCategory onClose={() => openForm(null)} />
+          ) : null}
           {addForm === "product" ? <NewProduct /> : null}
           {addForm === "size" ? (
             <NewSize onClose={() => openForm(null)} />

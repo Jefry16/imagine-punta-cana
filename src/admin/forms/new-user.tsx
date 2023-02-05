@@ -43,7 +43,7 @@ export default function NewUser(p: { onClose: () => void }) {
           data: formData,
           onSuccess: () => {
             p.onClose();
-            enqueueSnackbar("Realizado",{variant:'success'});
+            enqueueSnackbar("Realizado", { variant: "success" });
           },
         });
       },
@@ -66,6 +66,7 @@ export default function NewUser(p: { onClose: () => void }) {
   return (
     <AddForm onSubmit={handleSubmit} title="Añadir úsuario">
       <TextField
+        autoFocus
         fullWidth
         label="Nombre de úsuario"
         variant="filled"

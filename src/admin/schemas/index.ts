@@ -50,18 +50,40 @@ export const sizeSchema = yup.object({
     .required("Requerido"),
 });
 
-
 export const brandSchema = yup.object({
   name: yup
     .string()
     .trim()
-    .test("duplicate-brand", "El nombre de la marca ya existe", async (value) => {
-      try {
-        await axios.get("brands/name/" + value);
-        return false;
-      } catch {
-        return true;
+    .test(
+      "duplicate-brand",
+      "El nombre de la marca ya existe",
+      async (value) => {
+        try {
+          await axios.get("brands/name/" + value);
+          return false;
+        } catch {
+          return true;
+        }
       }
-    })
+    )
+    .required("Requerido"),
+});
+
+export const categorySchema = yup.object({
+  name: yup
+    .string()
+    .trim()
+    .test(
+      "duplicate-category",
+      "El nombre de la categoría ya existe",
+      async (value) => {
+        try {
+          await axios.get("categories/name/" + value);
+          return false;
+        } catch {
+          return true;
+        }
+      }
+    )
     .required("Requerido"),
 });
