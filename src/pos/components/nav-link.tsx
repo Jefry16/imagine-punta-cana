@@ -23,6 +23,7 @@ export default function NavLinkItem(p: {
         gap: "12px",
         color: "white",
         backgroundColor: isActive ? "#34363b" : "",
+        minWidth: "160px",
       })}
     >
       {p.icon}

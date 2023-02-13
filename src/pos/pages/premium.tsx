@@ -20,7 +20,7 @@ export default function National() {
 
   useEffect(() => {
     sendRequest({
-      url: "/drinks/nacional",
+      url: "/drinks/premium",
       onSuccess: (data) => setDrinks(data),
     });
   }, []);
